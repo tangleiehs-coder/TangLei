@@ -1,0 +1,42 @@
+name: 发送邮件
+
+on:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: '收件人邮箱'
+        required: true
+        default: '348082215@qq.com'
+      subject:
+        description: '邮件主题'
+        required: true
+        default: '来自老唐的消息'
+      body:
+        description: '邮件内容'
+        required: true
+        default: '邮件内容'
+      from_name:
+        description: '发件人署名'
+        required: true
+        default: '老唐'
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 发送邮件
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: ${{ github.event.inputs.subject }}
+          to: ${{ github.event.inputs.to }}
+          from: "${{ github.event.inputs.from_name }} <${{ secrets.EMAIL_USERNAME }}>"
+          body: |
+            ${{ github.event.inputs.body }}
+            
+            ---
+            发自 ${{ github.event.inputs.from_name }}
+            时间：${{ github.event.head_commit.timestamp }}
