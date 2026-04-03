@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .center-visual {
+      text-align: center;
+      padding: 20pt;
+    }
+    .stopwatch {
+      font-size: 72pt;
+      margin-bottom: 10pt;
+    }
+    .dashboard {
+      background: #1a202c;
+      border-radius: 12pt;
+      padding: 20pt;
+      margin: 0 auto;
+      width: 280pt;
+    }
+    .dashboard-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10pt 0;
+      border-bottom: 1pt solid #4a5568;
+    }
+    .dashboard-row:last-child {
+      border-bottom: none;
+    }
+    .dashboard-label {
+      color: #a0aec0;
+      font-size: 10pt;
+    }
+    .dashboard-value {
+      color: #fc8181;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    .future-box {
+      background: #ebf8ff;
+      border: 2pt solid #3182ce;
+      border-radius: 8pt;
+      padding: 16pt;
+    }
+    .future-title {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #2c5282;
+      margin-bottom: 10pt;
+    }
+    .future-content {
+      font-size: 10pt;
+      line-height: 1.7;
+      color: #2d3748;
+    }
+    .proof-box {
+      background: #faf5ff;
+      border-left: 4pt solid #805ad5;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .proof-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #553c9a;
+      margin-bottom: 6pt;
+    }
+    .proof-content {
+      font-size: 10pt;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">职责四：演练评估从"拍脑袋"走向可量化</p>
+  </div>
+  
+  <div class="content">
+    <div class="center-visual">
+      <p class="stopwatch">⏱️🎥</p>
+      
+      <div class="dashboard">
+        <div class="dashboard-row">
+          <span class="dashboard-label">响应时间</span>
+          <span class="dashboard-value">超时28秒 ⚠️</span>
+        </div>
+        <div class="dashboard-row">
+          <span class="dashboard-label">人员到位率</span>
+          <span class="dashboard-value">85%</span>
+        </div>
+        <div class="dashboard-row">
+          <span class="dashboard-label">流程合规度</span>
+          <span class="dashboard-value">92%</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="future-box">
+      <p class="future-title">🎯 未来演练模式</p>
+      <p class="future-content">AI接手计划规划与方案细化。AI多模态摄像头全程捕捉人员跑位、响应时间，生成多视角复盘视频与<strong>精确到秒的量化评估报告</strong>。</p>
+    </div>
+    
+    <div class="proof-box">
+      <p class="proof-title">✓ 可行性印证</p>
+      <p class="proof-content">AI视觉识别在工业场景（如中国航油项目）已达实用级别，数字孪生与大模型结合让演练更接近实战。</p>
+    </div>
+  </div>
+</body>
+</html>

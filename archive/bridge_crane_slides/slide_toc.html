@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 30pt 40pt;
+    }
+    .header-title {
+      font-size: 28pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 30pt 40pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .chapter-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16pt;
+      padding: 14pt 16pt;
+      background: #f7fafc;
+      border-radius: 8pt;
+      border-left: 5pt solid #1a3a5c;
+    }
+    .chapter-number-box {
+      background: #1a3a5c;
+      width: 32pt;
+      height: 32pt;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .chapter-number {
+      color: white;
+      font-size: 14pt;
+      font-weight: bold;
+    }
+    .chapter-info {
+      flex: 1;
+    }
+    .chapter-title {
+      font-size: 16pt;
+      font-weight: bold;
+      color: #1a3a5c;
+      margin-bottom: 4pt;
+    }
+    .chapter-desc {
+      font-size: 11pt;
+      color: #718096;
+    }
+    .footer {
+      padding: 20pt 40pt;
+      border-top: 1pt solid #e2e8f0;
+    }
+    .footer-text {
+      font-size: 10pt;
+      color: #a0aec0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">目 录</p>
+  </div>
+  
+  <div class="content">
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">一</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">安全距离</p>
+        <p class="chapter-desc">吊运通道、司机室视野</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">二</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">防护装置</p>
+        <p class="chapter-desc">走台栏杆、传动罩、舱口盖</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">三</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">保护装置</p>
+        <p class="chapter-desc">起升/行程限位、超载限制器、防风、急停、零位保护、门联锁</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">四</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">电气安全</p>
+        <p class="chapter-desc">接地、滑触线防护、绝缘</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">五</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">固定设施</p>
+        <p class="chapter-desc">梯子、平台、司机室</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">六</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">环境/工效</p>
+        <p class="chapter-desc">司机室舒适度、噪声</p>
+      </div>
+    </div>
+    
+    <div class="chapter-item">
+      <div class="chapter-number-box"><p class="chapter-number">七</p></div>
+      <div class="chapter-info">
+        <p class="chapter-title">特殊要求</p>
+        <p class="chapter-desc">防风（露天）、多机协同</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p class="footer-text">桥式起重机安全图集 · 目录</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .network-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20pt;
+      gap: 20pt;
+    }
+    .center-node {
+      width: 120pt;
+      height: 120pt;
+      background: #1a3a5c;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12pt;
+      font-weight: bold;
+      text-align: center;
+      border: 4pt solid #e8b931;
+      box-shadow: 0 0 20pt rgba(232,185,49,0.5);
+    }
+    .peripheral-nodes {
+      display: flex;
+      flex-direction: column;
+      gap: 10pt;
+    }
+    .node {
+      background: #3182ce;
+      color: white;
+      padding: 10pt 16pt;
+      border-radius: 20pt;
+      font-size: 10pt;
+      font-weight: bold;
+    }
+    .arrow-flow {
+      font-size: 24pt;
+      color: #e8b931;
+    }
+    .evolution-box {
+      background: #f0fff4;
+      border: 2pt solid #38a169;
+      border-radius: 8pt;
+      padding: 16pt;
+    }
+    .evolution-title {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #276749;
+      margin-bottom: 12pt;
+    }
+    .evolution-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10pt;
+      margin-bottom: 10pt;
+    }
+    .evolution-icon {
+      font-size: 16pt;
+    }
+    .evolution-text {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #2d3748;
+    }
+    .new-role-box {
+      background: #ebf8ff;
+      border-left: 4pt solid #3182ce;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .new-role-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #2c5282;
+      margin-bottom: 6pt;
+    }
+    .new-role-content {
+      font-size: 10pt;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">管生产必须管安全：全员化身"AI工长"</p>
+  </div>
+  
+  <div class="content">
+    <div class="network-visual">
+      <div class="peripheral-nodes">
+        <div class="node">工程主管</div>
+        <div class="node">技术员</div>
+      </div>
+      
+      <p class="arrow-flow">⇄</p>
+      
+      <div class="center-node">安全大脑<br/>AI中枢</div>
+      
+      <p class="arrow-flow">⇄</p>
+      
+      <div class="peripheral-nodes">
+        <div class="node">生产班长</div>
+        <div class="node">AI协调员</div>
+      </div>
+    </div>
+    
+    <div class="evolution-box">
+      <p class="evolution-title">🎯 角色的进化</p>
+      <div class="evolution-item">
+        <span class="evolution-icon">👷</span>
+        <p class="evolution-text">工程主管、技术员、生产班长将成为<strong>"AI最后一公里"</strong>的监督者和执行者，为结果担责。</p>
+      </div>
+      <div class="evolution-item">
+        <span class="evolution-icon">🧠</span>
+        <p class="evolution-text">老专家的经验不再"传不下去"，而是<strong>输入系统成为组织共同资产</strong>。</p>
+      </div>
+    </div>
+    
+    <div class="new-role-box">
+      <p class="new-role-title">🆕 新设职能：AI协调员</p>
+      <p class="new-role-content">懂业务的人专职负责优化提示词、调教模型。跨部门协作依靠AI代理无缝对接。</p>
+    </div>
+  </div>
+</body>
+</html>

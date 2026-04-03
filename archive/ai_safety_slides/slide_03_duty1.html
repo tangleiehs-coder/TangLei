@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .compare-box {
+      display: flex;
+      gap: 16pt;
+    }
+    .past-box, .future-box {
+      flex: 1;
+      padding: 16pt;
+      border-radius: 8pt;
+    }
+    .past-box {
+      background: #fed7d7;
+      border-left: 4pt solid #e53e3e;
+    }
+    .future-box {
+      background: #c6f6d5;
+      border-left: 4pt solid #38a169;
+    }
+    .box-title {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-bottom: 8pt;
+    }
+    .past-title { color: #c53030; }
+    .future-title { color: #276749; }
+    .box-content {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #2d3748;
+    }
+    .highlight-section {
+      background: #ebf8ff;
+      border: 2pt solid #3182ce;
+      border-radius: 8pt;
+      padding: 16pt;
+    }
+    .highlight-title {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #2c5282;
+      margin-bottom: 10pt;
+    }
+    .highlight-content {
+      font-size: 11pt;
+      line-height: 1.7;
+      color: #2d3748;
+    }
+    .keyword {
+      background: #e8b931;
+      color: #1a202c;
+      padding: 2pt 8pt;
+      border-radius: 4pt;
+      font-weight: bold;
+    }
+    .proof-box {
+      background: #faf5ff;
+      border-left: 4pt solid #805ad5;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .proof-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #553c9a;
+      margin-bottom: 6pt;
+    }
+    .proof-content {
+      font-size: 10pt;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">职责一：从"纸上谈兵"到"落地生根"</p>
+  </div>
+  
+  <div class="content">
+    <div class="compare-box">
+      <div class="past-box">
+        <p class="box-title past-title">✎ 过去</p>
+        <p class="box-content">埋头查资料、手工写长文，制度脱离一线实际，没人看、没人执行。</p>
+      </div>
+      <div class="future-box">
+        <p class="box-title future-title">⚙ 未来（1000天后）</p>
+        <p class="box-content">会议全程AI录音转写，结合历史数据与最新法规，自动生成"接地气"的初稿。</p>
+      </div>
+    </div>
+    
+    <div class="highlight-section">
+      <p class="highlight-title">🎯 角色转变</p>
+      <p class="highlight-content">采用私有知识库RAG方案，减少AI幻觉。安全人员转变为<span class="keyword">"组织者+审核者"</span>，承担最终拍板的法律责任。</p>
+    </div>
+    
+    <div class="proof-box">
+      <p class="proof-title">✓ 可行性印证</p>
+      <p class="proof-content">经过训练的OpenClaw等大模型已具备秒级出稿、文字转课程的能力。</p>
+    </div>
+  </div>
+</body>
+</html>

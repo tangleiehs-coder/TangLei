@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .ecg-bg {
+      background: linear-gradient(90deg, #e53e3e 0%, #e53e3e 2%, transparent 2%);
+      background-size: 20pt 100%;
+      opacity: 0.1;
+      position: absolute;
+      top: 100pt;
+      left: 0;
+      right: 0;
+      height: 100pt;
+    }
+    .compare-visual {
+      display: flex;
+      gap: 20pt;
+      align-items: center;
+    }
+    .visual-box {
+      flex: 1;
+      padding: 20pt;
+      border-radius: 8pt;
+      text-align: center;
+    }
+    .excel-box {
+      background: #fed7d7;
+      border: 2pt solid #e53e3e;
+    }
+    .radar-box {
+      background: #c6f6d5;
+      border: 2pt solid #38a169;
+    }
+    .visual-icon {
+      font-size: 48pt;
+      margin-bottom: 10pt;
+    }
+    .visual-text {
+      font-size: 11pt;
+      font-weight: bold;
+    }
+    .excel-text { color: #c53030; }
+    .radar-text { color: #276749; }
+    .future-box {
+      background: #ebf8ff;
+      border: 2pt solid #3182ce;
+      border-radius: 8pt;
+      padding: 16pt;
+    }
+    .future-title {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #2c5282;
+      margin-bottom: 10pt;
+    }
+    .future-content {
+      font-size: 10pt;
+      line-height: 1.7;
+      color: #2d3748;
+    }
+    .proof-box {
+      background: #faf5ff;
+      border-left: 4pt solid #805ad5;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .proof-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #553c9a;
+      margin-bottom: 6pt;
+    }
+    .proof-content {
+      font-size: 10pt;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">职责三：把"事后救火"变成"提前预判"</p>
+  </div>
+  
+  <div class="content">
+    <div class="compare-visual">
+      <div class="visual-box excel-box">
+        <p class="visual-icon">📊❌</p>
+        <p class="visual-text excel-text">过去：静态Excel表格<br/>靠个人经验填表<br/>辨识结果吃灰</p>
+      </div>
+      
+      <div style="font-size: 24pt; color: #718096;">→</div>
+      
+      <div class="visual-box radar-box">
+        <p class="visual-icon">📡⚡</p>
+        <p class="visual-text radar-text">未来：动态预警雷达<br/>AI实时监控预警<br/>人类最终把关</p>
+      </div>
+    </div>
+    
+    <div class="future-box">
+      <p class="future-title">🎯 未来工作模式</p>
+      <p class="future-content">AI实时提取访谈关键词、录入参数，基于工艺知识图谱自动识别风险并推荐管控标准。危险源变为<strong>"活的系统"</strong>，AI实时监控偏差并预警。</p>
+    </div>
+    
+    <div class="proof-box">
+      <p class="proof-title">✓ 可行性印证</p>
+      <p class="proof-content">医疗AI已能通过心电图提前3-5年预测心衰，工业动力机房也已应用时序数据提前捕捉异常趋势。</p>
+    </div>
+  </div>
+</body>
+</html>

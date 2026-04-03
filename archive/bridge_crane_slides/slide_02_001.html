@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 24pt;
+    }
+    .header-label {
+      font-size: 10pt;
+      color: #a0c4e8;
+    }
+    .header-value {
+      font-size: 13pt;
+      font-weight: bold;
+      color: white;
+      margin-top: 4pt;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 24pt;
+      display: flex;
+      flex-direction: column;
+      gap: 14pt;
+    }
+    .field-header {
+      display: flex;
+      align-items: center;
+      gap: 8pt;
+      margin-bottom: 6pt;
+    }
+    .field-number-box {
+      background: #1a3a5c;
+      width: 20pt;
+      height: 20pt;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .field-number {
+      color: white;
+      font-size: 10pt;
+      font-weight: bold;
+    }
+    .field-name {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1a3a5c;
+    }
+    .field-content {
+      font-size: 11pt;
+      color: #333333;
+      line-height: 1.5;
+    }
+    .risk-box {
+      background: #fff5f5;
+      border-left: 4pt solid #e53e3e;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .requirement-box {
+      background: #f0fff4;
+      border-left: 4pt solid #38a169;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .standard-box {
+      background: #ebf8ff;
+      border-left: 4pt solid #3182ce;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .quote-box {
+      background: #faf9f6;
+      border-left: 4pt solid #d69e2e;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .image-area {
+      background: #f7fafc;
+      border: 2pt dashed #cbd5e0;
+      border-radius: 8pt;
+      padding: 20pt;
+      margin-left: 28pt;
+      text-align: center;
+      min-height: 200pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-placeholder {
+      color: #a0aec0;
+      font-size: 11pt;
+    }
+    .footer {
+      padding: 12pt 24pt;
+      border-top: 1pt solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer-text {
+      font-size: 9pt;
+      color: #718096;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        <p class="header-label">设备名称</p>
+        <p class="header-value">桥式起重机</p>
+      </div>
+      <div>
+        <p class="header-label">部位</p>
+        <p class="header-value">走台通道</p>
+      </div>
+      <div>
+        <p class="header-label">关键词</p>
+        <p class="header-value">走台栏杆高度</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- 编号1：图示 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">1</p></div>
+        <p class="field-name">图示</p>
+      </div>
+      <div class="image-area">
+        <p class="image-placeholder">[走台栏杆结构示意图]</p>
+      </div>
+    </div>
+
+    <!-- 编号2：风险描述 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">2</p></div>
+        <p class="field-name">风险描述</p>
+      </div>
+      <div class="risk-box">
+        <p class="field-content">走台栏杆高度不足或缺失，人员在高空作业时可能发生坠落，造成严重人身伤害。</p>
+      </div>
+    </div>
+
+    <!-- 编号3：安全要求 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">3</p></div>
+        <p class="field-name">安全要求</p>
+      </div>
+      <div class="requirement-box">
+        <p class="field-content">起重机走台栏杆高度应不低于1m；对于大型起重机或工作环境恶劣的，栏杆高度应适当增加。栏杆应设有中间横杆和踢脚板。</p>
+      </div>
+    </div>
+
+    <!-- 编号4：法规标准来源 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">4</p></div>
+        <p class="field-name">法规标准来源</p>
+      </div>
+      <div class="standard-box">
+        <p class="field-content">GB/T 6067.1-2010 起重机械安全规程 第1部分：总则 3.6.5.1</p>
+      </div>
+    </div>
+
+    <!-- 编号5：条款原文 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">5</p></div>
+        <p class="field-name">条款原文</p>
+      </div>
+      <div class="quote-box">
+        <p class="field-content">"在走台上和端梁上应设置高度不低于1m的栏杆，栏杆上应有间距不大于0.35m的中间横杆。在栏杆下部应设有高度不小于70mm的踢脚板。"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">第二章 防护装置</p>
+    <p class="footer-text">第 1 页</p>
+  </div>
+</body>
+</html>

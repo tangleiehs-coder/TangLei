@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .cross-out {
+      text-decoration: line-through;
+      color: #a0aec0;
+      font-size: 14pt;
+      text-align: center;
+      padding: 10pt;
+      background: #f7fafc;
+      border-radius: 8pt;
+    }
+    .phone-mockup {
+      background: #1a202c;
+      border-radius: 20pt;
+      padding: 20pt;
+      margin: 10pt auto;
+      width: 200pt;
+      text-align: center;
+    }
+    .phone-screen {
+      background: #2d3748;
+      border-radius: 12pt;
+      padding: 16pt;
+    }
+    .phone-title {
+      color: #63b3ed;
+      font-size: 11pt;
+      margin-bottom: 8pt;
+    }
+    .phone-content {
+      color: white;
+      font-size: 12pt;
+      font-weight: bold;
+      margin-bottom: 12pt;
+    }
+    .progress-bar {
+      background: #4a5568;
+      height: 8pt;
+      border-radius: 4pt;
+      overflow: hidden;
+    }
+    .progress-fill {
+      background: #48bb78;
+      width: 65%;
+      height: 100%;
+    }
+    .progress-text {
+      color: #a0aec0;
+      font-size: 9pt;
+      margin-top: 6pt;
+    }
+    .future-features {
+      background: #f0fff4;
+      border: 2pt solid #38a169;
+      border-radius: 8pt;
+      padding: 16pt;
+    }
+    .feature-title {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #276749;
+      margin-bottom: 10pt;
+    }
+    .feature-list {
+      font-size: 10pt;
+      line-height: 1.8;
+      color: #2d3748;
+    }
+    .proof-box {
+      background: #faf5ff;
+      border-left: 4pt solid #805ad5;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .proof-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #553c9a;
+      margin-bottom: 6pt;
+    }
+    .proof-content {
+      font-size: 10pt;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">职责二：告别"大锅饭"，走向"千人千面"</p>
+  </div>
+  
+  <div class="content">
+    <p class="cross-out">🚫 过去：集中开课、纸质签到留痕、课程脱离实际需求</p>
+    
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <p class="phone-title">AI个性化推送</p>
+        <p class="phone-content">张三的专属3分钟微课</p>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="progress-text">学习进度 65% | 已获12积分</p>
+      </div>
+    </div>
+    
+    <div class="future-features">
+      <p class="feature-title">🎯 未来培训模式</p>
+      <p class="feature-list">• AI根据员工操作数据精准识别短板，推送专属3分钟微课程<br/>
+      • 培训内容自动沉淀进员工AI助手，随时提问秒回<br/>
+      • 学时、成绩全自动数字留痕</p>
+    </div>
+    
+    <div class="proof-box">
+      <p class="proof-title">✓ 可行性印证</p>
+      <p class="proof-content">汽车智能系统已能推送个性化驾驶课程，可汗学院Khanmigo已实现千人千面辅导。</p>
+    </div>
+  </div>
+</body>
+</html>

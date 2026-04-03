@@ -1,0 +1,248 @@
+{
+  "workflow_name": "audio_to_semantic_video",
+  "version": "2.1",
+  "visual_style": {
+    "type": "icon_with_keywords",
+    "forbidden": ["full_sentence_subtitle", "paragraph_text_on_screen"],
+    "elements": [
+      {
+        "element": "icon",
+        "description": "表达核心概念的单一图标"
+      },
+      {
+        "element": "keywords",
+        "description": "1-2个关键词",
+        "max_words": 3,
+        "max_lines": 1
+      },
+      {
+        "element": "logic_relationship",
+        "description": "通过图标组合、箭头、布局表达逻辑关系"
+      }
+    ]
+  },
+  "cover": {
+    "enabled": true,
+    "position": "video_start",
+    "duration": 3,
+    "content": {
+      "section_number": "string (如：第3节)",
+      "course_name": "string (课程名称)"
+    },
+    "visual": {
+      "section_number": {
+        "font_size": 72,
+        "font_weight": "bold",
+        "position": "center_vertical_offset_-40"
+      },
+      "course_name": {
+        "font_size": 48,
+        "font_weight": "bold",
+        "position": "center_vertical_offset_40"
+      },
+      "background": "#1a1a2e",
+      "text_color": "#ffffff"
+    },
+    "constraints": [
+      "无图标",
+      "无装饰元素",
+      "无副标题",
+      "无背景图案"
+    ]
+  },
+  "input": {
+    "audio_file": "path/to/audio.mp3",
+    "transcript": "path/to/transcript.txt",
+    "course_info": {
+      "section_number": "string",
+      "course_name": "string"
+    }
+  },
+  "output": {
+    "video_file": "path/to/output.mp4"
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "name": "timestamp_extraction",
+      "tool": "whisper",
+      "parameters": {
+        "model": "large-v3",
+        "word_timestamps": true,
+        "language": "zh"
+      },
+      "output": {
+        "timestamped_transcript": [
+          {
+            "text": "string",
+            "start": "float",
+            "end": "float"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 2,
+      "name": "transcript_alignment",
+      "description": "ASR转写稿与用户原文稿比对校对",
+      "output": {
+        "aligned_transcript": [
+          {
+            "text": "string",
+            "start": "float",
+            "end": "float"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 3,
+      "name": "semantic_segmentation",
+      "description": "按语义切分为时长约10秒的视觉单元",
+      "constraints": {
+        "target_duration": 10,
+        "duration_range": [8, 12],
+        "cut_at_sentence_boundary": true
+      },
+      "output": {
+        "segments": [
+          {
+            "segment_id": "int",
+            "text": "string",
+            "start": "float",
+            "end": "float"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 4,
+      "name": "cover_generation",
+      "description": "生成封面画面",
+      "timing": {
+        "start": 0,
+        "duration": 3
+      },
+      "content": {
+        "section_number": "from input.course_info.section_number",
+        "course_name": "from input.course_info.course_name"
+      },
+      "visual_spec": {
+        "layout": "centered",
+        "section_number_style": "large_bold",
+        "course_name_style": "medium_bold",
+        "background": "solid_color",
+        "no_extra_elements": true
+      },
+      "output": {
+        "cover_image": "base64 or path"
+      }
+    },
+    {
+      "step_id": 5,
+      "name": "visual_element_generation",
+      "description": "为每个语义段落生成图标+关键词的视觉元素",
+      "substeps": [
+        {
+          "name": "logic_extraction",
+          "method": "llm",
+          "model": "deepseek",
+          "prompt_template": "分析以下音频段落文本，提取核心逻辑关系。\n文本：{segment_text}\n\n输出JSON格式：\n{\n  \"core_concept\": \"核心概念（2-4个字）\",\n  \"keywords\": [\"关键词1\", \"关键词2\"],\n  \"logic_type\": \"因果/对比/层级/流程/并列/循环/其他\",\n  \"icon_suggestion\": \"建议的图标名称\",\n  \"visual_structure\": \"建议的视觉布局\"\n}"
+        },
+        {
+          "name": "visual_rendering",
+          "description": "根据逻辑提取结果生成视觉元素",
+          "format": {
+            "type": "svg_or_image",
+            "composition": {
+              "icon": {"position": "center", "style": "line_icon"},
+              "keywords": {"position": "below_icon", "font": "sans_serif_bold"},
+              "logic_elements": {"arrows": "if needed", "connectors": "if needed"}
+            }
+          }
+        }
+      ],
+      "output": {
+        "segments_with_visuals": [
+          {
+            "segment_id": "int",
+            "text": "string",
+            "start": "float",
+            "end": "float",
+            "visual": {
+              "type": "icon_with_keywords",
+              "icon": "string",
+              "keywords": ["string"],
+              "logic_relationship": "string",
+              "layout": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step_id": 6,
+      "name": "video_composition",
+      "description": "按时间轴合成封面、音频和视觉元素序列",
+      "tool": "ffmpeg",
+      "timeline": [
+        {
+          "type": "cover",
+          "start": 0,
+          "duration": 3,
+          "content": "cover_image"
+        },
+        {
+          "type": "visual_sequence",
+          "start": 3,
+          "end": "audio_end",
+          "items": "segments_with_visuals",
+          "display_rule": "每个视觉元素从start时间开始显示，持续到下一个segment的start时间"
+        }
+      ],
+      "parameters": {
+        "audio_track": "original_audio",
+        "transition": "fade",
+        "fade_duration": 0.5,
+        "background": "solid_color",
+        "resolution": "1920x1080",
+        "fps": 24
+      },
+      "output": {
+        "preliminary_video": "path/to/preliminary.mp4"
+      }
+    },
+    {
+      "step_id": 7,
+      "name": "ai_quality_assurance",
+      "description": "多模态AI自动校验图文一致性",
+      "max_retry_rounds": 3,
+      "skip_for": ["cover"],
+      "substeps": [
+        {
+          "name": "consistency_evaluation",
+          "method": "multimodal_llm",
+          "model": "gpt-4v",
+          "evaluation_criteria": {
+            "scoring": "1-5 scale",
+            "threshold": 4
+          },
+          "prompt_template": "评估视觉元素与音频文本的匹配度。\n文本：{segment_text}\n视觉元素：{visual_description}\n\n评估维度：\n1. 图标是否准确表达核心概念？\n2. 关键词是否抓住要点？\n3. 逻辑关系表达是否正确？\n\n输出JSON：\n{\n  \"score\": 1-5,\n  \"icon_match\": true/false,\n  \"keywords_match\": true/false,\n  \"logic_match\": true/false,\n  \"improved_visual\": {}\n}"
+        },
+        {
+          "name": "regeneration",
+          "description": "对不合格段落重新生成视觉元素",
+          "max_retries_per_segment": 3,
+          "fallback": {
+            "condition": "after 3 retries",
+            "action": "use_generic_icon_with_keywords"
+          }
+        },
+        {
+          "name": "video_recomposition",
+          "description": "替换不合格视觉元素后重新合成视频"
+        }
+      ]
+    }
+  ]
+}

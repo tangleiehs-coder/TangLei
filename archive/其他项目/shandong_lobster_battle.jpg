@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>NoSuchKey</Code>
+  <Message>The specified key does not exist.</Message>
+  <RequestId>69CE7C4BB24BB7313509932B</RequestId>
+  <HostId>minimax-public-cdn.oss-cn-wulanchabu.aliyuncs.com</HostId>
+  <Key>minimax-chat/image/2026-04-02/95f8d9c6-7c91-45b3-9e89-20a9c9e82d78.jpg</Key>
+  <EC>0026-00000001</EC>
+  <RecommendDoc>https://api.aliyun.com/troubleshoot?q=0026-00000001</RecommendDoc>
+</Error>

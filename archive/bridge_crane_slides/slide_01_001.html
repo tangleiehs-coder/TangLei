@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 24pt;
+    }
+    .header-label {
+      font-size: 10pt;
+      color: #a0c4e8;
+    }
+    .header-value {
+      font-size: 13pt;
+      font-weight: bold;
+      color: white;
+      margin-top: 4pt;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 24pt;
+      display: flex;
+      flex-direction: column;
+      gap: 14pt;
+    }
+    .field-header {
+      display: flex;
+      align-items: center;
+      gap: 8pt;
+      margin-bottom: 6pt;
+    }
+    .field-number-box {
+      background: #1a3a5c;
+      width: 20pt;
+      height: 20pt;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .field-number {
+      color: white;
+      font-size: 10pt;
+      font-weight: bold;
+    }
+    .field-name {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1a3a5c;
+    }
+    .field-content {
+      font-size: 11pt;
+      color: #333333;
+      line-height: 1.5;
+    }
+    .risk-box {
+      background: #fff5f5;
+      border-left: 4pt solid #e53e3e;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .requirement-box {
+      background: #f0fff4;
+      border-left: 4pt solid #38a169;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .standard-box {
+      background: #ebf8ff;
+      border-left: 4pt solid #3182ce;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    .quote-box {
+      background: #faf9f6;
+      border-left: 4pt solid #d69e2e;
+      padding: 10pt 14pt;
+      margin-left: 28pt;
+    }
+    /* 图片区域 - 16:9比例 */
+    .image-area {
+      background: #f7fafc;
+      border: 2pt dashed #cbd5e0;
+      border-radius: 8pt;
+      padding: 20pt;
+      margin-left: 28pt;
+      text-align: center;
+      /* 16:9比例框 - 宽度约540pt，高度约304pt */
+      min-height: 200pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-placeholder {
+      color: #a0aec0;
+      font-size: 11pt;
+    }
+    .footer {
+      padding: 12pt 24pt;
+      border-top: 1pt solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer-text {
+      font-size: 9pt;
+      color: #718096;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+        <p class="header-label">设备名称</p>
+        <p class="header-value">桥式起重机</p>
+      </div>
+      <div>
+        <p class="header-label">部位</p>
+        <p class="header-value">起升机构</p>
+      </div>
+      <div>
+        <p class="header-label">关键词</p>
+        <p class="header-value">起升高度限位器</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- 编号1：图示（移到最上方） -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">1</p></div>
+        <p class="field-name">图示</p>
+      </div>
+      <div class="image-area">
+        <p class="image-placeholder">[起升高度限位器安装位置示意图]</p>
+      </div>
+    </div>
+
+    <!-- 编号2：风险描述 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">2</p></div>
+        <p class="field-name">风险描述</p>
+      </div>
+      <div class="risk-box">
+        <p class="field-content">取物装置上升超过设计极限位置，造成吊钩冲顶、钢丝绳断裂或重物坠落，导致设备损坏和人员伤亡。</p>
+      </div>
+    </div>
+
+    <!-- 编号3：安全要求 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">3</p></div>
+        <p class="field-name">安全要求</p>
+      </div>
+      <div class="requirement-box">
+        <p class="field-content">起升机构均应装设起升高度限位器。当取物装置上升到设计规定的上极限位置时，应能立即切断起升动力源。</p>
+      </div>
+    </div>
+
+    <!-- 编号4：法规标准来源 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">4</p></div>
+        <p class="field-name">法规标准来源</p>
+      </div>
+      <div class="standard-box">
+        <p class="field-content">GB/T 6067.1-2010 起重机械安全规程 第1部分：总则 9.2.1</p>
+      </div>
+    </div>
+
+    <!-- 编号5：条款原文 -->
+    <div>
+      <div class="field-header">
+        <div class="field-number-box"><p class="field-number">5</p></div>
+        <p class="field-name">条款原文</p>
+      </div>
+      <div class="quote-box">
+        <p class="field-content">"起升机构均应装设起升高度限位器。当取物装置上升到设计规定的上极限位置时，应能立即切断起升动力源。在此极限位置的上方，还应留有足够的空余高度，以适应上升制动行程的要求。"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">第三章 保护装置</p>
+    <p class="footer-text">第 1 页</p>
+  </div>
+</body>
+</html>

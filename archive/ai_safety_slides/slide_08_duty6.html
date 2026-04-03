@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 595pt;
+      height: 842pt;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+    }
+    .header {
+      background: #1a3a5c;
+      padding: 20pt 30pt;
+    }
+    .header-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 20pt 30pt;
+      display: flex;
+      flex-direction: column;
+      gap: 16pt;
+    }
+    .compare-row {
+      display: flex;
+      gap: 16pt;
+    }
+    .compare-box {
+      flex: 1;
+      padding: 20pt;
+      border-radius: 8pt;
+      text-align: center;
+    }
+    .punish-box {
+      background: #fed7d7;
+      border: 2pt solid #e53e3e;
+    }
+    .reward-box {
+      background: #c6f6d5;
+      border: 2pt solid #38a169;
+    }
+    .box-icon {
+      font-size: 48pt;
+      margin-bottom: 10pt;
+    }
+    .box-title {
+      font-size: 13pt;
+      font-weight: bold;
+      margin-bottom: 8pt;
+    }
+    .punish-title { color: #c53030; }
+    .reward-title { color: #276749; }
+    .box-content {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #4a5568;
+    }
+    .chat-bubble {
+      background: #ebf8ff;
+      border: 2pt solid #3182ce;
+      border-radius: 16pt;
+      padding: 16pt;
+      margin: 10pt 0;
+      position: relative;
+    }
+    .chat-bubble::before {
+      content: "💬";
+      position: absolute;
+      top: -10pt;
+      left: 20pt;
+      font-size: 20pt;
+    }
+    .chat-title {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #2c5282;
+      margin-bottom: 8pt;
+      margin-top: 10pt;
+    }
+    .chat-content {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #2d3748;
+    }
+    .proof-box {
+      background: #faf5ff;
+      border-left: 4pt solid #805ad5;
+      padding: 12pt 16pt;
+      border-radius: 0 8pt 8pt 0;
+    }
+    .proof-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #553c9a;
+      margin-bottom: 6pt;
+    }
+    .proof-content {
+      font-size: 10pt;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p class="header-title">职责六：从"抓错惩罚"到"个性化沟通与正向激励"</p>
+  </div>
+  
+  <div class="content">
+    <div class="compare-row">
+      <div class="compare-box punish-box">
+        <p class="box-icon">🚫📝</p>
+        <p class="box-title punish-title">过去：罚款+呵斥</p>
+        <p class="box-content">一套话术打天下<br/>易引发人际冲突</p>
+      </div>
+      
+      <div class="compare-box reward-box">
+        <p class="box-icon">👍🪙</p>
+        <p class="box-title reward-title">未来：点赞+积分</p>
+        <p class="box-content">个性化沟通话术<br/>精准奖励好行为</p>
+      </div>
+    </div>
+    
+    <div class="chat-bubble">
+      <p class="chat-title">AI生成个性化沟通话术</p>
+      <p class="chat-content">班前会AI自动为班组长生成特定高风险员工的"个性化沟通话术"。可穿戴设备辅助调出历史情况，提供沟通建议并复盘。</p>
+    </div>
+    
+    <div class="proof-box">
+      <p class="proof-title">✓ 可行性印证</p>
+      <p class="proof-content">AI跨圈层沟通与多模态行为捕捉技术已成熟，积分体系已被证明能有效强化好行为。</p>
+    </div>
+  </div>
+</body>
+</html>
