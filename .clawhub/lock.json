@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "skills": {
+    "image-gen": {
+      "version": "2.0.1",
+      "installedAt": 1775234830782
+    },
+    "youtube-transcript": {
+      "version": "1.0.1",
+      "installedAt": 1775234836409
+    },
+    "pdf": {
+      "version": "0.1.0",
+      "installedAt": 1775234840661
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1775234900978
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1775234903092
+    },
+    "web-search": {
+      "version": "1.0.0",
+      "installedAt": 1775234906616
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1775234909153
+    },
+    "powerpoint-pptx": {
+      "version": "1.0.1",
+      "installedAt": 1775234968154
+    },
+    "docx-cn": {
+      "version": "1.0.1",
+      "installedAt": 1775234973204
+    },
+    "excel-xlsx": {
+      "version": "1.0.2",
+      "installedAt": 1775235001433
+    }
+  }
+}
