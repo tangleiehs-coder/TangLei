@@ -1,47 +1,84 @@
 # MEMORY.md - Long-Term Memory
 
-> Your curated memories. Distill from daily notes. Remove when outdated.
+> Curated from daily notes. 老唐（唐磊）的核心记忆。
 
 ---
 
-## About [Human Name]
+## About 老唐
 
-### Key Context
-[Important background that affects how you help them]
+### 身份
+- 名字：唐磊
+- Feishu Open ID: ou_5141a893e5d073b42408be52c857d0af
+- 职业：内容创作者（课程视频 + 知识管理）
+- 曾接第三方项目：宇宙木业安全管理制度
 
-### Preferences Learned
-[Things you've discovered about how they like to work]
-
-### Important Dates
-[Birthdays, anniversaries, deadlines they care about]
-
----
-
-## Lessons Learned
-
-### [Date] - [Topic]
-[What happened and what you learned]
+### 核心标签
+课程视频制作 | 深蓝极简教育风 | 音画同步 | 知识可视化
 
 ---
 
-## Ongoing Context
+## 关键教训
 
-### Active Projects
-[What's currently in progress]
+### 第6节课程视频 — 音画同步（2026-03-23）
+**问题：** 视频画面与音频严重错位，经历5轮迭代才接近解决
 
-### Key Decisions Made
-[Important decisions and their reasoning]
+**教训：**
+1. 必须用 Whisper 重新转录，不用旧 JSON
+2. 画面要纯净，只有 icon+关键词，禁止任何UI元素
+3. 累积误差 → 用逐帧精确生成，不用 ffmpeg concat
+4. 语义理解需要 LLM 辅助，不能简单截断
 
-### Things to Remember
-[Anything else important for continuity]
+**最终方案（v2.1）：**
+- 逐帧精确生成
+- 语义分段，约10秒一段
+- AI 提取核心概念
+- 多模态 AI 评估图文一致性
+
+### Get笔记整理（2026-03-23）
+**问题：** Get笔记开放 API 仅支持新建，不支持编辑
+
+**教训：**
+- 不能直接 API 修改笔记内容
+- 只能生成格式化内容，用户手动复制粘贴
+- 每日有 write 限制
 
 ---
 
-## Relationships & People
+## 已完成项目（归档）
 
-### [Person Name]
-[Who they are, relationship to human, relevant context]
+| 项目 | 状态 | 完成时间 |
+|------|------|----------|
+| 第6节课程视频 | ✅ 完成 | 2026-03-23 |
+| Get笔记批量整理 | ✅ 完成 | 2026-03-24 |
+| 五年级科学资料 | ✅ 完成 | 2026-03-24 |
+| 危险化学品安全管理制度 | ✅ 完成（虚构测试） | 2026-03-25 |
 
 ---
 
-*Review and update periodically. Daily notes are raw; this is curated.*
+## 关键决策
+
+- **Get笔记API限制：** 只新建不编辑 → 用户手动复制粘贴
+- **视频工作流：** 废弃旧方案，采用 v2.1 逐帧精确生成
+- **制度法规：** 虚构测试项目，基于征求意见稿，正式版颁布后全面修订
+- **多Agent退役：** 2026-04-03 决定，茶茶/蟹蟹/盖盖/布布下线
+
+---
+
+## 技术环境
+
+- Gateway: Mac mini 本地运行
+- 模型: MiniMax M2.7（主力）, Kimi k2p5（编码）
+- 飞书: 2026-04-03 配置账号（App ID: cli_a928d8c0047adbc0）
+
+---
+
+## 偏好总结
+
+- **工作风格：** 务实直接，注重效率
+- **沟通：** 不喜欢重复，讨厌遗忘上下文的AI
+- **视频质量：** 追求零误差音画同步，有执念
+- **知识管理：** 追求简洁格式（无emoji、无bullet、加粗空行）
+
+---
+
+*最后更新：2026-04-04 00:09*
